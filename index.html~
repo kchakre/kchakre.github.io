@@ -40,7 +40,7 @@
 				border: 2px solid;
 				top: 17px;
 				right:30px;
-				position: absolute;		
+				position: absolute;	
 		}
 </style>
 
@@ -53,7 +53,7 @@
         <!-- Add your site or application content here -->
         <div id="heading">RESUME</div>
            
-           <img src="kishor.jpg" width="100px" />
+           <img src="kishor.jpg" width= "100px"/>
            
            <div id="kishor">KISHOR B. CHAKRE</div>                                                             
           <b>Mail ID:</b> kchakre@gmail.com<br />
