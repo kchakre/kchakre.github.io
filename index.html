@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Mobile app for pan.do/ra</title>
+
+    <!-- Point to the compiled stylesheet -->
+    <link rel="stylesheet" type="text/css" href="main.css">
+	 <link rel="stylesheet" type="text/css" href="css/foundation.css">
+
+     <link rel="stylesheet" type="text/css" href="videoInfo.css">
+
+     <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <!-- Point to the require script -->
+    <script data-main="scripts/config" src="bower_components/requirejs/require.js"></script>
+    
+</head>
+<body>
+  <div class="fixed" id="navbar">
+	<nav class="top-bar" id="siteHeader" data-topbar> 
+        <ul class="title-area"> 
+            <div class="large-4 small-4 columns">
+              <li class="name"> <h1><a href="#"><b>Home</b></a></h1> </li>
+            </div>
+            <div class="large-8 small-8 columns">
+              <form id="searchForm">
+                <li class="has-form">
+                  <div class="row collapse"> 
+                    <div class="large-11 small-8 columns">
+                      <input type="text" id="searchInput" placeholder="Find Search"> 
+                    </div> 
+                    <div class="large-1 small-4 columns"> 
+                      <button id="searchButton" class="alert button postfix">Search</button> 
+                    </div> 
+                  </div>
+                </li>
+              </form>
+            </div>
+       </ul>
+  </nav>
+  </div>
+
+
+    <div id="content"></div>
+
+</body>
+</html>
+

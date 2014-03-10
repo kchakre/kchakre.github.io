@@ -1,0 +1,51 @@
+    *{
+        margin: 0px;
+        padding: 0px;   
+    }
+    header{
+        display: block;
+    }
+    h3{
+        font: 20px bold Tahoma;
+    }
+    
+    #data{
+        margin: 20px auto;
+        text-align: left;
+    }
+    #signinDiv
+    {
+        border: 1px solid black;
+        width: 500px;
+        height: 250px;
+        margin: 20px auto;
+        padding: 20px;
+        text-align: center;
+    }
+    img{
+        border:1px solid #;
+        border-radius: 15px;
+        box-shadow: #EEE8AA 8px 8px 8px;
+    }
+    #pad{
+        margin-top: 20px;
+        text-align: left;
+    }
+    body{
+        background-image: url(wall.jpg);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        font: Tahoma;
+        text-align: center;
+
+    }
+    
+#searchButton{
+        border:1px solid #;
+        border-radius: 20px;   
+}
+#searchInput{
+        border:1px solid #;
+        border-radius: 20px;
+}
