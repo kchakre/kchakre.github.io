@@ -25,17 +25,14 @@
     img{
         border:1px solid #;
         border-radius: 15px;
-        box-shadow: #EEE8AA 8px 8px 8px;
+        box-shadow: gray 8px 8px 8px;
     }
     #pad{
         margin-top: 20px;
         text-align: left;
     }
     body{
-        background-image: url(wall.jpg);
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
+
         font: Tahoma;
         text-align: center;
 
@@ -49,3 +46,4 @@
         border:1px solid #;
         border-radius: 20px;
 }
+
