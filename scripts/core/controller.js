@@ -52,44 +52,64 @@ function($, require, Backbone, HomeView, api, LoadingView) {
             })
         },
 
-        'list': function(id) {
-            var $xhr = api.getVideosInList(id);
+        'list': function(id, page) {
+            if (!page) {
+                page = 0;
+            }
+            var startRange = page * 50;
+            var endRange = startRange + 50;
+            var range = [startRange, endRange];
+            //first xhr request only fetches number of results, etc.
+            var $xhr = api.getVideosInList(id, range);
             var app = require('app');
             app.content.show(loadingView);
             $xhr.done(function(response) {
-                var videosData = response.data.items;
-                require([
-                    'collections/videos',
-                    'views/videoList',
-
-                ],function(Videos, VideoListView) {
-                    console.log("videos in this list", videosData);
-                    var videosCollection = new Videos(videosData);
-                    var view = new VideoListView({
-                        collection: videosCollection
+                var videosCount = response.data.items;
+                var $xhr2 = api.getVideosInList(id, range, ['id', 'title']);
+                $xhr2.done(function(response) {
+                    var videosData = response.data.items;    
+                    require([
+                        'collections/videos',
+                        'views/videoList'
+                    ],function(Videos, VideoListView) {
+                        console.log("videos in this list", videosData);
+                        var videosCollection = new Videos(videosData);
+                        var view = new VideoListView({
+                            collection: videosCollection
+                        });
+                        app.content.show(view);
                     });
-                    app.content.show(view);
                 });
             });    
         },
 
-        'search': function(queryString) {
+        'search': function(queryString, page) {
+            if (!page) {
+                page = 0;
+            }
+            var startRange = page * 50;
+            var endRange = startRange + 50;
+            var range = [startRange, endRange];
             var app = require('app');
             app.content.show(loadingView);
-            var $xhr = api.getVideosSearch(queryString);
+            var $xhr = api.getVideosSearch(queryString, range);
             $xhr.done(function(response) {
-                var videosData = response.data.items;
-                require([
-                    'collections/videos',
-                    'views/videoSearchResults',
+                var videosCount = response.data.items;
+                var $xhr2 = api.getVideosSearch(queryString, range, ['id', 'title']);
+                $xhr2.done(function(response) {
+                    var videosData = response.data.items;
+                    require([
+                        'collections/videos',
+                        'views/videoSearchResults',
 
-                ],function(Videos, VideoSearchResults) {
-                    console.log("videos matching query", videosData);
-                    var videosCollection = new Videos(videosData);
-                    var view = new VideoSearchResults({
-                        collection: videosCollection
+                    ],function(Videos, VideoSearchResults) {
+                        console.log("videos matching query", videosData);
+                        var videosCollection = new Videos(videosData);
+                        var view = new VideoSearchResults({
+                            collection: videosCollection
+                        });
+                        app.content.show(view);
                     });
-                    app.content.show(view);
                 });
             });    
         },

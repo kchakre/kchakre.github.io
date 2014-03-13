@@ -38,12 +38,7 @@
 
     }
     
-#searchButton{
-        border:1px solid #;
-        border-radius: 20px;   
+.home-icon{
+    color: rgb(240, 65, 36); 
+    font-size: 2em;
 }
-#searchInput{
-        border:1px solid #;
-        border-radius: 20px;
-}
-

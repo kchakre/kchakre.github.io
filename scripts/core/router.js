@@ -12,7 +12,9 @@ function(Marionette, Controller) {
         'video/:id/info': 'videoInfo',
         'video/:id/layers': 'videoLayers',
         'list/:id': 'list',
+        'list/:id/:page': 'list',
         'search/:query': 'search',
+        'search/:query/:page': 'search',
         'media/:id': 'media'
         
     };

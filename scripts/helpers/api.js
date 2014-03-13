@@ -53,7 +53,10 @@ function($, settings) {
             return this.q(action, data);
         };
 
-        this.getVideosInList = function(id) {
+        this.getVideosInList = function(id, range, keys) {
+            if (!range) {
+                range = [0, 50];
+            }
             var data = {
                 query: {
                     conditions: [{
@@ -63,15 +66,20 @@ function($, settings) {
                     }],
                     operator: '&'
                 },
-                keys: ['title', 'id'],
-                range: [0,50],
+                range: range,
                 sort: [{key: 'title', operator: '+'}]
             };
+            if (keys) {
+                data.keys = keys;
+            }
             var action = "find";
             return this.q(action, data);
         };
 
-        this.getVideosSearch = function(queryString) {
+        this.getVideosSearch = function(queryString, range, keys) {
+            if (!range) {
+                range = [0, 50];
+            }
             var data = {
                 query: {
                     conditions: [{
@@ -81,10 +89,12 @@ function($, settings) {
                     }],
                     operator: '&'
                 },
-                keys: ['title', 'id'],
-                range: [0,50],
+                range: range,
                 sort: [{key: 'title', operator: '+'}]
             };
+            if (keys) {
+                data.keys = keys;
+            }
             var action = "find";
             return this.q(action, data);          
         };

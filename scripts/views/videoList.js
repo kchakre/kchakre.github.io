@@ -1,12 +1,18 @@
 define([
 	'marionette',
-	'views/videoItem'
+	'views/videoItem',
+    'settings',
+    'templates'
 ],
 
-function(Marionette, VideoItemView) {
+function(Marionette, VideoItemView, settings, templates) {
 
-	var VideoListView = Marionette.CollectionView.extend({
-		itemView: VideoItemView
+	var VideoListView = Marionette.CompositeView.extend({
+        template: templates[settings.templatesBase + "videoList.html"],
+		itemView: VideoItemView,
+        appendHtml: function(collectionView, itemView) {
+            collectionView.$('.videosList').append(itemView.el);    
+        }
 	});
 
 	return VideoListView;
