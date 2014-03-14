@@ -42,3 +42,8 @@
     color: rgb(240, 65, 36); 
     font-size: 2em;
 }
+
+.top-bar input, .top-bar .button {
+    font-size: 0.875rem;
+    position: relative;
+    top: 4px;
