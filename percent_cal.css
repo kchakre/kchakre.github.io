@@ -4,4 +4,10 @@
 }
 body{
 	text-align: center;
+
+}
+
+header{
+	border: 1px solid #008CBA;
+	background-color: #008CBA;
 }
