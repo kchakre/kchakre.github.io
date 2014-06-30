@@ -1,0 +1,200 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Tables</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    <form>
+    <div class="row collapse">
+        <div class="large-12 columns">
+        <label><b>Enter the Value : </b>
+        
+          <input type="text" id="txt" /></label>
+        </div>
+        <center>
+          <a class="button" data-reveal-id="firstModal" onclick="table();">Calculate</a>
+          <input class="button" type="reset" value="&nbsp;&nbsp;Clear&nbsp;&nbsp;"/>
+        </center>
+    </div>
+  </form>
+    <div id="firstModal" class="reveal-modal" data-reveal>
+        <center>
+        <table> 
+          <thead> 
+            <tr> 
+              <th>
+                Number
+              </th> 
+              <th>
+                Answer
+              </th> 
+              
+            </tr> 
+          </thead> 
+          
+          <tbody> 
+            <tr> 
+              <td>
+                <span id ="number1"></span> X 1   = 
+              </td> 
+              <td>
+                <span id ="ans1"></span>
+              </td> 
+            </tr> 
+
+            <tr> 
+              <td>
+                <span id ="number2"></span> X 2   = 
+              </td> 
+              <td>
+                <span id ="ans2"></span>
+              </td> 
+            </tr> 
+
+            <tr> 
+              <td>
+                <span id ="number3"></span> X 3   = 
+              </td> 
+              <td>
+                <span id ="ans3"></span>
+              </td> 
+            </tr> 
+
+            <tr> 
+              <td>
+                <span id ="number4"></span> X 4   = 
+              </td> 
+              <td>
+                <span id ="ans4"></span>
+              </td> 
+            </tr> 
+
+           <tr> 
+              <td>
+                <span id ="number5"></span> X 5   = 
+              </td> 
+              <td>
+                <span id ="ans5"></span>
+              </td> 
+            </tr> 
+
+            <tr> 
+              <td>
+                <span id ="number6"></span> X 6   = 
+              </td> 
+              <td>
+                <span id ="ans6"></span>
+              </td> 
+            </tr> 
+
+            <tr> 
+              <td>
+                <span id ="number7"></span> X 7   = 
+              </td> 
+              <td>
+                <span id ="ans7"></span>
+              </td> 
+            </tr> 
+
+           <tr> 
+              <td>
+                <span id ="number8"></span> X 8   = 
+              </td> 
+              <td>
+                <span id ="ans8"></span>
+              </td> 
+            </tr> 
+
+            <tr> 
+              <td>
+                <span id ="number9"></span> X 9   = 
+              </td> 
+              <td>
+                <span id ="ans9"></span>
+              </td> 
+            </tr> 
+
+            <tr> 
+              <td>
+                <span id ="number10"></span> X 10   = 
+              </td> 
+              <td>
+                <span id ="ans10"></span>
+              </td> 
+            </tr> 
+          </tbody> 
+        </table></center>
+         <a class="close-reveal-modal">&#215;</a>
+      </div>
+
+
+    <script type="text/javascript">
+
+      function table () {
+        var txt = parseFloat(document.getElementById("txt").value);
+
+        document.getElementById("number1").innerHTML = txt;
+        document.getElementById("number2").innerHTML = txt;
+        document.getElementById("number3").innerHTML = txt;
+        document.getElementById("number4").innerHTML = txt;
+        document.getElementById("number5").innerHTML = txt;
+        document.getElementById("number6").innerHTML = txt;
+        document.getElementById("number7").innerHTML = txt;
+        document.getElementById("number8").innerHTML = txt;
+        document.getElementById("number9").innerHTML = txt;
+        document.getElementById("number10").innerHTML = txt;
+
+        var ans1 = txt*1;
+        document.getElementById("ans1").innerHTML = ans1;
+
+
+        var ans2 = txt*2;
+        document.getElementById("ans2").innerHTML = ans2;
+
+
+        var ans3 = txt*3;
+        document.getElementById("ans3").innerHTML = ans3;
+
+        var ans4 = txt*4;
+        document.getElementById("ans4").innerHTML = ans4;
+
+
+        var ans5 = txt*5;
+        document.getElementById("ans5").innerHTML = ans5;
+
+
+        var ans6 = txt*6;
+        document.getElementById("ans6").innerHTML = ans6;
+
+
+        var ans7 = txt*7;
+        document.getElementById("ans7").innerHTML = ans7;
+
+
+        var ans8 = txt*8;
+        document.getElementById("ans8").innerHTML = ans8;
+
+
+        var ans9 = txt*9;
+        document.getElementById("ans9").innerHTML = ans9;
+
+
+        var ans10 = txt*10;
+        document.getElementById("ans10").innerHTML = ans10;
+
+      }
+
+    </script>
+    
+    
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Percentage</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="default.css" />
+    <script src="js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+    
+    <form >
+         
+         <div class="row">
+          <div class="large-12 columns">
+
+            <div class="large-6 medium-6 small-6 columns ">
+                <label><b>Enter the principle Amount:</b>
+                <input type="text" id="text1"/>
+                </label>
+                
+                <label><b>Enter the percentage :</b>
+                <input type="text" id="text2"/>
+                </label>
+
+                <center>
+                <a class="button" onclick="calPercentage();">Calculate</a>
+                <input class="button" type="reset" value="&nbsp;&nbsp;Clear&nbsp;&nbsp;" onclick="clearAnswer();"/>
+                </center>
+            </div>
+
+            <div class="large-6 medium-6 small-6 columns">
+                <p id="ans"><center></center></p>
+            </div>
+
+           </div> 
+         </div>
+
+    </form>
+
+    <script type="text/javascript">
+
+        function calPercentage()
+        {
+
+          var text1 = parseFloat(document.getElementById("text1").value);
+          var text2 = parseFloat(document.getElementById("text2").value);
+
+          var ans = text1*text2/100;
+
+          document.getElementById("ans").innerHTML = ans;
+
+        }
+
+        function clearAnswer(){
+
+          document.getElementById("ans").innerHTML = "";
+        }
+
+    </script>
+    
+    
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
